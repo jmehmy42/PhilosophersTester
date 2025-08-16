@@ -17,7 +17,7 @@ git clone https://github.com/jmehmy42/philosopher_42_tester.git
 After cloning, **move the contents** of this tester into your `philos` project directory (the directory containing your compiled `philo` executable):
 
 ```bash
-mv philosopher_42_tester/* /path/to/your/philos/
+mv philosopher_42_tester/philo_tester.sh /path/to/your/philos/
 ```
 
 Alternatively, you can clone directly inside your `philos` directory.
@@ -27,7 +27,7 @@ Alternatively, you can clone directly inside your `philos` directory.
 Some scripts may require executable permissions. Run:
 
 ```bash
-chmod +x *.sh
+chmod +x philo_tester.sh
 ```
 
 This will make all shell scripts in the directory executable.
