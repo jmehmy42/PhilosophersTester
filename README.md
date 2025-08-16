@@ -46,10 +46,10 @@ Ensure that `philo` is successfully built.
 
 ### 5. Run the Tester
 
-Now, you can run the tester. Typically, the main script is named something like `test.sh` or similar:
+Now, you can run the tester. Typically, the main script is named something like `philo_tester.sh`:
 
 ```bash
-./test.sh
+./philo_tester.sh
 ```
 
 Or, if there is a different entry point, follow the instructions in the script comments.
@@ -65,7 +65,7 @@ Or, if there is a different entry point, follow the instructions in the script c
 ```
 philos/
 ├── philo              # Your compiled executable
-├── test.sh            # Entry point for tests
+├── philo_tester.sh    # Entry point for tests
 ├── ...                # Other tester scripts/files
 ```
 
