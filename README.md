@@ -1,6 +1,6 @@
-# Philosopher 42 Tester
+# Philosopher Tester
 
-This repository provides a tester for the **Philosopher 42** project. It automates the process of running tests on your compiled `philo` executable to ensure compliance with project requirements.
+This repository provides a tester for the **Philosopher** project. It automates the process of running tests on your compiled `philo` executable to ensure compliance with project requirements.
 
 ## 🚀 Getting Started
 
