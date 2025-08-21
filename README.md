@@ -17,7 +17,7 @@ git clone https://github.com/jmehmy42/philosopher_42_tester.git
 After cloning, **move the contents** of this tester into your `philos` project directory (the directory containing your compiled `philo` executable):
 
 ```bash
-mv philosopher_42_tester/philo_tester.sh /path/to/your/philos/
+mv philosopher_42_tester/tester_philo.sh /path/to/your/philos/
 ```
 
 Alternatively, you can clone directly inside your `philos` directory.
@@ -27,7 +27,7 @@ Alternatively, you can clone directly inside your `philos` directory.
 Some scripts may require executable permissions. Run:
 
 ```bash
-chmod +x philo_tester.sh
+chmod +x tester_philo.sh
 ```
 
 This will make all shell scripts in the directory executable.
@@ -46,10 +46,10 @@ Ensure that `philo` is successfully built.
 
 ### 5. Run the Tester
 
-Now, you can run the tester. Typically, the main script is named something like `philo_tester.sh`:
+Now, you can run the tester. Typically, the main script is named something like `tester_philo.sh`:
 
 ```bash
-./philo_tester.sh
+./tester_philo.sh
 ```
 
 Or, if there is a different entry point, follow the instructions in the script comments.
@@ -65,7 +65,7 @@ Or, if there is a different entry point, follow the instructions in the script c
 ```
 philos/
 ├── philo              # Your compiled executable
-├── philo_tester.sh    # Entry point for tests
+├── tester_philo.sh    # Entry point for tests
 ├── ...                # Other tester scripts/files
 ```
 
