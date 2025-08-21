@@ -41,7 +41,8 @@ run_valgrind() {
     local params="$1"
     local description="$2"
     echo "Valgrind (mem/leak) check: $description"
-    local valgrind_output=$(timeout 15s valgrind --error-exitcode=42 ./philo $params 2>&1)
+    echo "Command: valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./philo $params"
+    local valgrind_output=$(valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --error-exitcode=42  timeout 15s ./philo $params 2>&1)
     local errors=$(echo "$valgrind_output" | grep -E "ERROR SUMMARY: [^0]*[1-9]+")
     if [ -z "$errors" ]; then
         print_colored $GREEN "✅ Valgrind PASS - No memory/fd errors"
@@ -53,7 +54,8 @@ run_valgrind() {
     echo ""
 
     echo "Helgrind (thread/race) check: $description"
-    local helgrind_output=$(timeout 15s valgrind --tool=helgrind --error-exitcode=43 ./philo $params 2>&1)
+    echo "Command: valgrind --tool=helgrind ./philo $params"
+    local helgrind_output=$(valgrind --tool=helgrind --error-exitcode=43 timeout 15s ./philo $params 2>&1)
     local helgrind_errors=$(echo "$helgrind_output" | grep "Possible data race")
     if [ -z "$helgrind_errors" ]; then
         print_colored $GREEN "✅ Helgrind PASS - No data races detected"
